@@ -5,7 +5,7 @@ static long	countdigit(long n)
 	int	i;
 
 	i = 1;
-	while (n > 9)
+	while (n >= 9)
 	{
 		n = n / 10;
 		i++;
