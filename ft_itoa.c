@@ -6,7 +6,7 @@
 /*   By: fasharif <fasharif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 15:23:40 by fasharif          #+#    #+#             */
-/*   Updated: 2022/08/12 16:49:50 by fasharif         ###   ########.fr       */
+/*   Updated: 2022/08/14 15:17:51 by fasharif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static long	countdigit(long nb)
 {
 	int	i;
 
-	i = 0;
+	i = 1;
 	while (nb > 9)
 	{
 		nb /= 10;
@@ -27,7 +27,7 @@ static long	countdigit(long nb)
 
 static void	putnbr(long nbr)
 {
-	if (nbr >= 9)
+	if (nbr > 9)
 		putnbr(nbr / 10);
 	ft_putchar(nbr % 10 + '0');
 }
