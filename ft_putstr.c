@@ -12,16 +12,31 @@
 
 #include "ft_printf.h"
 
-int	ft_putstr(char *str)
+static void	ft_strlen(char *str)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	if (!str)
-		str = "(NULL)";
 	while (str[i])
 	{
-		ft_putchar(str[i]);
+		write(1, &str[i], 1);
+		i++;
+	}
+}
+
+int	ft_putstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	if (str == NULL)
+	{
+		ft_strlen("(null)");
+		return (6);
+	}
+	while (str[i])
+	{
+		write(1, &str[i], 1);
 		i++;
 	}
 	return (i);
